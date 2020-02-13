@@ -488,7 +488,7 @@ Halo:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862397811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Color:
     serializedVersion: 2
     rgba: 4290230199
@@ -554,7 +554,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe385f1c455ec942a89e698952cf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocityMult: 8
+  prefabProjectile: {fileID: 3347852870152907726, guid: 980e4184fd933e14b839b98217bf6b13,
+    type: 3}
   launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &989455910
 GameObject:
   m_ObjectHideFlags: 0
