@@ -5,11 +5,15 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     static public bool goalMet = false;
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Projectile")
+        // When the trigger is hit by something
+        // Check to see if it's a Projectile
+        if (other.gameObject.tag == "Projectile")
         {
+            // If so, set goalMet to true
             Goal.goalMet = true;
+            // Also set the alpha of the color to higher opacity
             Material mat = GetComponent<Renderer>().material;
             Color c = mat.color;
             c.a = 1;
