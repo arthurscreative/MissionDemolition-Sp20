@@ -8,6 +8,15 @@ public class Slingshot : MonoBehaviour
     [Header("Set in Inspector")]
     public GameObject prefabProjectile;
     public GameObject launchPoint;
+    static private Slingshot s;
+    static public Vector3 LAUNCH_POS
+    {
+        get
+        {
+            if (s == null) return Vector3.zero;
+            return s.launchPos;
+        }
+    }
 
     [Header("Set Dynamically")]
 
@@ -55,6 +64,7 @@ public class Slingshot : MonoBehaviour
 
     void Awake()
     {
+        s = this;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
